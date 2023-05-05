@@ -1,0 +1,9 @@
+<%- include("partials/header") %>
+
+<h1><%= blogContent.Title %></h1>
+<p><%= blogContent.Post %></p>
+<form action="/delete" method="post">
+    <input type="hidden" name="title" value="<%= blogContent.Title %>">
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+<%- include("partials/footer") %>
